@@ -180,8 +180,9 @@ li {
 }
 #heading {
   position: absolute;
-  top: 37px;
-  left: 550px;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
   font-size: 3rem;
 }
 #anotherPlusIcon {
