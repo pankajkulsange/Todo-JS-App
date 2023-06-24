@@ -74,12 +74,17 @@ function createCard() {
   title.addEventListener("click", () => {
     document.querySelector("#tasks").style.visibility = "hidden";
     document.querySelector("#list").style.visibility = "hidden";
-    document.querySelector("#additem").style.visibility = "hidden";
+    // document.querySelector("#additem").style.visibility = "hidden";
     document.querySelector("#backicon").style.visibility = "visible";
     document.querySelector("#back").style.visibility = "visible";
     document.querySelector("#heading").style.visibility = "visible";
-    document.querySelector("#createList").style.fontSize = "2rem";
-    document.querySelector("#createList").style.marginLeft = "500px";
+    document.querySelector("#createList").classList.add("updateList");
+    document.querySelector("#lists").style.display = "flex";
+    document.querySelector("#lists").style.justifyContent = "center";
+    document.querySelector("#lists").style.width = "90vw";
+
+    // document.querySelector("#createList").style.fontSize = "2rem";
+    // document.querySelector("#createList").style.marginLeft = "500px";
     heading.innerText = userInput;
     document.body.append(heading);
     let tempArray = [];

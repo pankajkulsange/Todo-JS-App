@@ -48,6 +48,11 @@ body {
 #createList:hover {
   transform: scale(1.3);
 }
+
+#updateList {
+  font-size: 2rem;
+  margin-left: 500px;
+}
 #noItems {
   font-size: 2.3rem;
   position: absolute;
@@ -165,6 +170,7 @@ li {
   margin-left: 120px;
   position: absolute;
   top: 23px;
+  left: 115px;
 }
 #backicon:hover {
   transform: scale(1.1);
@@ -202,4 +208,49 @@ li {
   padding: 19px 0px 0 1px;
   bottom: 15px;
   right: 66px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  #createList {
+    margin-left: 0 !important;
+  }
+  #back {
+    top: -35px;
+    left: 148px;
+  }
+  #backicon {
+    top: -31px;
+    left: -16px;
+  }
+  #additem,
+  #createList {
+    margin-top: 20px;
+  }
+  #listForm,
+  #itemForm {
+    width: 100vw;
+    box-sizing: border-box;
+    left: 0;
+  }
+  #lists {
+    width: 100vw;
+    left: 0;
+    gap: 0;
+  }
+  #noItems {
+    display: flex;
+    width: 100vw !important;
+    left: 0;
+    text-align: center;
+  }
+  .card {
+    width: 75vw;
+  }
 }
