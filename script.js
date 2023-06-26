@@ -16,7 +16,6 @@ function createList() {
   document.querySelector("#back").style.visibility = "hidden";
   document.querySelector("#heading").style.visibility = "hidden";
   document.querySelector("#createList").style.fontSize = "1.8rem";
-  // document.querySelector('#')
 }
 function closeListForm() {
   document.querySelector("#listForm").style.visibility = "hidden";
