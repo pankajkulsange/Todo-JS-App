@@ -223,12 +223,13 @@ li {
     margin-left: 0 !important;
   }
   #back {
-    top: -35px;
-    left: 148px;
+    top: -29px;
+    left: 191px;
   }
   #backicon {
+    font-size: 1.7rem;
     top: -31px;
-    left: -16px;
+    left: 31px;
   }
   #additem,
   #createList {
@@ -255,13 +256,18 @@ li {
     width: 75vw;
   }
   #tasks,
-  #list {
+  #list,
+  #heading {
     font-size: 28px;
+  }
+  #heading {
+    top: 58px;
   }
   #additem,
   #add,
   #exit,
   #itemName,
+  #back,
   ul li {
     font-size: 20px;
   }
