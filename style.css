@@ -218,6 +218,7 @@ li {
     width: 100vw;
     box-sizing: border-box;
   }
+
   #createList {
     margin-left: 0 !important;
   }
@@ -252,5 +253,19 @@ li {
   }
   .card {
     width: 75vw;
+  }
+  #tasks,
+  #list {
+    font-size: 28px;
+  }
+  #additem,
+  #add,
+  #exit,
+  #itemName,
+  ul li {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 25px;
   }
 }
