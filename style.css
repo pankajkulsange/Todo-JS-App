@@ -145,7 +145,7 @@ button:hover {
 #lists {
   width: 90%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   position: absolute;
   top: 135px;
