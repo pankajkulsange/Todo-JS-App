@@ -3,6 +3,7 @@ document.querySelector("#closeList").addEventListener("click", closeListForm);
 document.querySelector("#exit").addEventListener("click", closeItemForm);
 document.querySelector("#addList").addEventListener("click", createCard);
 document.querySelector("#additem").addEventListener("click", createList);
+
 function createList() {
   document.querySelector("#listForm").style.visibility = "visible";
   document.querySelector("#noItems").style.visibility = "hidden";
@@ -17,6 +18,7 @@ function createList() {
   document.querySelector("#heading").style.visibility = "hidden";
   document.querySelector("#createList").style.fontSize = "1.8rem";
 }
+
 function closeListForm() {
   document.querySelector("#listForm").style.visibility = "hidden";
   document.querySelector("#blur").style.visibility = "hidden";
@@ -24,11 +26,28 @@ function closeListForm() {
     document.querySelector("#noItems").style.visibility = "visible";
   }
 }
+
 function closeItemForm() {
   document.querySelector("#itemForm").style.visibility = "hidden";
   document.querySelector("#blur").style.visibility = "hidden";
 }
+// NOTE: back function
+function backFunc() {
+  document.querySelector("#lists").style.justifyContent = "space-around";
+  document.querySelector("#tasks").style.visibility = "visible";
+  document.querySelector("#list").style.visibility = "visible";
+  document.querySelector("#createList").style.visibility = "visible";
+  document.querySelector("#additem").style.visibility = "visible";
+  document.querySelector("#backicon").style.visibility = "hidden";
+  document.querySelector("#back").style.visibility = "hidden";
+  document.querySelector("#heading").style.visibility = "hidden";
+  document.querySelector("#createList").style.fontSize = "1.6rem";
+  document.querySelector("#createList").style.marginLeft = "0px";
+  display(cards);
+}
+
 let cards = [];
+
 function createCard() {
   document.querySelector("#blur").style.visibility = "hidden";
   document.querySelector("#listForm").style.visibility = "hidden";
@@ -51,10 +70,12 @@ function createCard() {
   deleteIcon.id = "delete";
   title.innerText = userInput;
   div1.append(title, rule, ul, deleteIcon, plusIcon);
+
   plusIcon.addEventListener("click", () => {
     showItemForm(ul);
     document.querySelector("#blur").style.visibility = "visible";
   });
+
   deleteIcon.addEventListener("click", function removeList() {
     let tempNewArray = [];
     for (let i = 0; i < cards.length; i++) {
@@ -67,6 +88,7 @@ function createCard() {
     if (cards.length === 0) {
       document.querySelector("#noItems").style.visibility = "visible";
     }
+    backFunc();
   });
   cards.push(div1);
   display(cards);
@@ -81,6 +103,10 @@ function createCard() {
     document.querySelector("#lists").style.display = "flex";
     document.querySelector("#lists").style.justifyContent = "center";
     document.querySelector("#lists").style.width = "90vw";
+    // const remove = document.querySelector("#delete").classList.add('remove');
+    // remove.addEventListener('click', {
+
+    // })
 
     // document.querySelector("#createList").style.fontSize = "2rem";
     // document.querySelector("#createList").style.marginLeft = "500px";
@@ -95,30 +121,10 @@ function createCard() {
     display(tempArray);
     document.querySelector("#lists").style.justifyContent = "center";
     document.querySelector("#backicon").addEventListener("click", () => {
-      document.querySelector("#lists").style.justifyContent = "space-around";
-      document.querySelector("#tasks").style.visibility = "visible";
-      document.querySelector("#list").style.visibility = "visible";
-      document.querySelector("#createList").style.visibility = "visible";
-      document.querySelector("#additem").style.visibility = "visible";
-      document.querySelector("#backicon").style.visibility = "hidden";
-      document.querySelector("#back").style.visibility = "hidden";
-      document.querySelector("#heading").style.visibility = "hidden";
-      document.querySelector("#createList").style.fontSize = "1.6rem";
-      document.querySelector("#createList").style.marginLeft = "0px";
-      display(cards);
+      backFunc();
     });
     document.querySelector("#back").addEventListener("click", () => {
-      document.querySelector("#lists").style.justifyContent = "space-around";
-      document.querySelector("#tasks").style.visibility = "visible";
-      document.querySelector("#list").style.visibility = "visible";
-      document.querySelector("#createList").style.visibility = "visible";
-      document.querySelector("#additem").style.visibility = "visible";
-      document.querySelector("#backicon").style.visibility = "hidden";
-      document.querySelector("#back").style.visibility = "hidden";
-      document.querySelector("#heading").style.visibility = "hidden";
-      document.querySelector("#createList").style.fontSize = "1.6rem";
-      document.querySelector("#createList").style.marginLeft = "0px";
-      display(cards);
+      backFunc();
     });
   });
   document.getElementById("listName").value = "";
@@ -152,10 +158,10 @@ function display(cards) {
     lists.appendChild(cards[i]);
   }
 }
-function display(tempArray) {
-  let lists = document.querySelector("#lists");
-  lists.innerHTML = "";
-  for (let i = 0; i < tempArray.length; i++) {
-    lists.appendChild(tempArray[i]);
-  }
-}
+// function display(tempArray) {
+//   let lists = document.querySelector("#lists");
+//   lists.innerHTML = "";
+//   for (let i = 0; i < tempArray.length; i++) {
+//     lists.appendChild(tempArray[i]);
+//   }
+// }
