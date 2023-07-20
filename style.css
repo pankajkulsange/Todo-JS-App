@@ -242,6 +242,9 @@ li {
     left: 50%;
     transform: translateX(-50%);
   }
+  #listForm {
+    padding: 20px;
+  }
   #lists {
     width: 100vw;
     left: 0;
